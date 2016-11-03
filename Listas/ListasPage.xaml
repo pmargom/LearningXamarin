@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+		Padding="0, 20, 0, 0"
+		Title="User list"
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:Listas" 
+		x:Class="Listas.ListasPage">
+
+		<ListView x:Name="userList">
+
+			<ListView.ItemTemplate>
+				<DataTemplate>
+<!--					<TextCell Text="{Binding id}" Detail="{Binding firstName}" />-->
+					<ImageCell 
+						Text="{Binding firstName}" 
+						Detail="{Binding lastName}"
+						ImageSource="{Binding photoUrl}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		
+		</ListView>
+	
+</ContentPage>
