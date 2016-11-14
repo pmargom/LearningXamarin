@@ -7,6 +7,7 @@ namespace Listas
 {
 	public partial class ListasPage : ContentPage
 	{
+
 		private string ApiURL = "https://icangopmg-develop.azurewebsites.net/api/v1/users";
 		private HttpClient _client = new HttpClient();
 
@@ -14,6 +15,18 @@ namespace Listas
 		{
 			InitializeComponent();
 
+		}
+
+		async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (e.SelectedItem == null)
+			{
+				return;
+			}
+
+			var user = e.SelectedItem as User;
+			await Navigation.PushAsync(new DetailPage(user));
+			userList.SelectedItem = null;
 		}
 
 		protected override void OnAppearing()
