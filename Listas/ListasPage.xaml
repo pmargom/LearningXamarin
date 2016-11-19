@@ -11,7 +11,6 @@
 
 			<ListView.ItemTemplate>
 				<DataTemplate>
-<!--					<TextCell Text="{Binding id}" Detail="{Binding firstName}" />-->
 					<ImageCell 
 						Text="{Binding firstName}" 
 						Detail="{Binding lastName}"

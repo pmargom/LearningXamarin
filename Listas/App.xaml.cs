@@ -8,7 +8,7 @@ namespace Listas
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new ListasPage());
+			MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart()
